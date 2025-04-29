@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #000;
+    background-image: url("logo.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    font-family: garamond;
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.hb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #FFF;
+    padding: 5px;
+}
+
+.hb_l, .hb_c, .hb_r {
+    display: flex;
+    align-items: center;
+    width: 30vw;
+}
+
+.hb_l {
+    justify-content: left;
+    font-size: large;
+    cursor: pointer;
+}
+
+.hb_c {
+    justify-content: center;
+    font-size: x-large;
+}
+
+.hb_r {
+    justify-content: right;
+    font-size: large;
+}
