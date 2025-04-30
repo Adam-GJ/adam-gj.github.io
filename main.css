@@ -25,6 +25,10 @@ a, a:hover {
     text-decoration: none;
 }
 
+h1 {
+    margin-bottom: 12px;
+}
+
 .hb {
     display: flex;
     justify-content: space-between;
@@ -168,4 +172,131 @@ a, a:hover {
 .instagram_logo {
     width: 20px;
     padding: 10px;
+}
+
+.upcoming_gigs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+}
+
+.upcg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 150%;
+    padding: 2px;
+    margin: 3px;
+    transition-duration: 250ms;
+    outline: 1px solid #e0e0e000;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.upcg:hover {
+    outline: 1px solid #e0e0e0ff;
+    background-color: #00000060;
+}
+
+.gig_tmp_big_hidden {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+}
+
+.gig_tmp_big {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+}
+
+.gt_container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gt_container2 {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gt_location {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+
+    padding: 5px;
+    border-radius: 12px;
+    background-color: #ffffff20;
+}
+
+.gt_datetime {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
+
+    padding: 5px;
+    border-radius: 12px;
+    background-color: #ffffff20;
+}
+
+.gt_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    /* padding: 5px; */
+    border-radius: 12px;
+    background-color: #ffffff20;
+    height: 100px;
+}
+
+.gt_city, .gt_date {
+    font-size: xx-large;
+}
+
+.gt_venue, .gt_time {
+    font-size: large;
+}
+
+.gt_info_img {
+    width: 50px;
+    height: 50px;
+}
+
+.gt_poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
+
+.gt_info_img {
+    margin: 5px;
+}
+
+.gt_inf, .gt_tix, .gt_otd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-size: medium;
+    width: 100px;
+    /* height: 50px; */
 }
