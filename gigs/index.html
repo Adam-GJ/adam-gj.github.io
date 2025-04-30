@@ -1,36 +1,158 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="icon" href="/VORED_ICON.ico" type="image/x-icon">
+        <title>&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</title>
     </head>
     <body>
-        <!-- <div class="gig_card">
-            <span class="gig_date">SUNDAY&nbsp;11ᵗʰ&nbsp;MAY</span>
-            <span class="gig_div"></span>
-            <span class="gig_time">19:00</span>
-            <span class="gig_div"></span>
-            <span class="gig_loc"><a target="_parent" href="https://maps.app.goo.gl/3eV6nZNzozkA9NwRA">MOTHER MARY'S, MANCHESTER</a></span>
-            <span class="gig_div"></span>
-            <span class="gig_tickets"><a target="_parent" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">TICKETS</a></span>
-        </div> -->
-        <div class="gig_card">
-            <span class="gig_date">SUNDAY&nbsp;11ᵗʰ&nbsp;MAY</span>
-            <span class="gig_div"></span>
-            <span class="gig_time">19:00</span>
-            <span class="gig_div"></span>
-            <span class="gig_loc"><a target="_parent" href="https://maps.app.goo.gl/3eV6nZNzozkA9NwRA">MOTHER MARY'S, MANCHESTER</a></span>
-            <span class="gig_div"></span>
-            <span class="gig_tickets"><a target="_parent" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">TICKETS</a></span>
-        </div>
-        <br>
-        <div class="gig_card">
-            <span class="gig_date">FRIDAY&nbsp;18ᵗʰ&nbsp;JULY</span>
-            <span class="gig_div"></span>
-            <span class="gig_time">19:00</span>
-            <span class="gig_div"></span>
-            <span class="gig_loc"><a target="_parent" href="https://maps.app.goo.gl/BbyJF9wP2zZwakaP7">OUTPOST, LIVERPOOL</a></span>
-            <span class="gig_div"></span>
-            <span class="gig_tickets"><a target="_parent" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">TICKETS</a></span>
-        </div>
+        <section id="headerbar" class="hb">
+            <div class="hb_l">&#x2630;</div>
+            <!-- <div class="hb_c">&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</div> -->
+            <div class="hb_c"><a href="/vored.html">VORED</a></div>
+            <div class="hb_r">
+                <span class="hb_r_item"><a href="https://www.instagram.com/vored_hxc/"><img class="instagram_logo" src="/Instagram_Glyph_White.png"></a></span>
+                <span class="hb_r_item"><a href="https://open.spotify.com/artist/0dVLSPMdwVk75hQnZEkhiV"><img class="spotify_logo" src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Black.png"></a></span>
+                <span class="hb_r_item"><a href="/gigs/">Gigs</a></span>
+            </div>
+        </section>
+        <section id="main" class="main">
+            <!-- <div id="gig_tmp" class="gig_tmp_big">
+                <div class="gt_container">
+                    <a class="gt_location" href="https://maps.app.goo.gl/a9ZiJtiqM1k9t4hG7">
+                        <div id="gt_city"  class="gt_city" >MANCHESTER</div>
+                        <div id="gt_venue" class="gt_venue">Mother Mary's</div>
+                    </a>
+                    <div class="gt_datetime">
+                        <div class="gt_date">11th MAY 2025</div>
+                        <div class="gt_time">Doors: TBA</div>
+                    </div>
+                </div>
+                <div class="gt_container2">
+                    <a class="gt_info" href="https://www.instagram.com/vored_hxc/">
+                        <img class="gt_info_img" src="/info.png">
+                        <div id="gt_inf" class="gt_inf">INFO</div>
+                    </a>
+                    <a class="gt_info" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="gt_info_img" src="/ticket.png">
+                        <div id="gt_tix" class="gt_tix">ADVANCED TICKETS</div>
+                    </a>
+                    <a class="gt_info" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="gt_info_img" src="/door.png">
+                        <div id="gt_otd" class="gt_otd">OTD AVAILABLE</div>
+                    </a>
+                </div>
+            </div> -->
+            <div id="gig_tmp" class="gig_tmp_big_hidden">
+                <div class="gt_container">
+                    <a class="gt_location" href="https://maps.app.goo.gl/a9ZiJtiqM1k9t4hG7">
+                        <div id="gt_city"  class="gt_city" >#city#</div>
+                        <div id="gt_venue" class="gt_venue">#venue#</div>
+                    </a>
+                    <div class="gt_datetime">
+                        <div class="gt_date">#date#</div>
+                        <div class="gt_time">Doors: #time#</div>
+                    </div>
+                </div>
+                <div class="gt_container2">
+                    <a class="gt_info infolink" href="https://www.instagram.com/vored_hxc/">
+                        <img class="gt_info_img" src="/info.png">
+                        <div id="gt_inf" class="gt_inf">INFO</div>
+                    </a>
+                    <a class="gt_info ticketslink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="gt_info_img" src="/ticket.png">
+                        <div id="gt_tix" class="gt_tix">ADVANCED TICKETS</div>
+                    </a>
+                    <a class="gt_info otdlink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="gt_info_img" src="/door.png">
+                        <div id="gt_otd" class="gt_otd">OTD #AVAILABLE#</div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </body>
+    <script>
+        const gc_template       = document.getElementById("gig_tmp");
+        const gigs_container    = document.getElementById("main");
+
+        const gigs = {
+            "MANCHESTER110525": {
+                dd: 11,
+                mm: 5,
+                mmm: "MAY",
+                yy: 25,
+                yyyy: 2025,
+                time: "",
+                city: "MANCHESTER",
+                venue: "Mother Mary's Bar",
+                maplink: "https://maps.app.goo.gl/3eV6nZNzozkA9NwRA",
+                ticketlink: "",
+                otd: true
+            },
+            "LIVERPOOL180725": {
+                dd: 18,
+                mm: 7,
+                mmm: "JULY",
+                yy: 25,
+                yyyy: 2025,
+                time: "",
+                city: "LIVERPOOL",
+                venue: "Outpost",
+                maplink: "https://maps.app.goo.gl/BbyJF9wP2zZwakaP7",
+                ticketlink: "",
+                otd: true
+            }
+        }
+
+        // for (let gig of gigs) {
+        //     let gc_clone = gc_template.cloneNode(true);
+        //     gc_clone.classList.remove("hidden");
+
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#dd#", gig.dd.toString());
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#mm#", gig.mm);
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#yy#", gig.yy.toString());
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", gig.city);
+
+        //     if (gig.ticketlink.length > 0) {
+        //         gc_clone.getElementsByClassName("ticket_link")[0].href = gig.ticketlink;
+        //     }
+        //     gc_clone.getElementsByClassName("city_map_link")[0].href = gig.maplink;
+
+        //     gigs_container.appendChild(gc_clone);
+        // }
+
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        if (code) {
+            let thisgig = gigs[code];
+            let gc_clone = gc_template.cloneNode(true);
+
+            gc_clone.classList.remove("gig_tmp_big_hidden");
+            gc_clone.classList.add("gig_tmp_big");
+
+            gc_clone.getElementsByClassName("gt_location")[0].href = thisgig.maplink;
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", `${thisgig.city}`);
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#venue#", `${thisgig.venue}`);
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#date#", `${thisgig.dd}th ${thisgig.mmm} ${thisgig.yyyy}`);
+        
+            if (thisgig.time === "") {
+                gc_clone.innerHTML = gc_clone.innerHTML.replace("#time#", "TBA");
+            } else {
+                gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", `${thisgig.time}`);
+            }
+
+            if (thisgig.otd) {
+                gc_clone.innerHTML = gc_clone.innerHTML.replace("#AVAILABLE#", "AVAILABLE");
+            } else {
+                gc_clone.innerHTML = gc_clone.innerHTML.replace("#AVAILABLE#", "UNAVAILABLE");
+            }
+
+            gigs_container.appendChild(gc_clone);
+        }
+    </script>
 </html>
