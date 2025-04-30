@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="VORED_ICON.ico" type="image/x-icon">
         <title>&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</title>
     </head>
     <body>
@@ -15,9 +16,63 @@
             </div>
         </section>
         <section class="main">
-            <div class="main_iframe_continer">
-                <iframe class="main_iframe" src="gigs.html"></iframe>
+            <div id="gigs" class="gigs">
+                <div id="gig_card_0" class="gig_card hidden">
+                    <div id="gig_date_0" class="gig_date">
+                        <span id="gig_year_0"    class="gig_year">#yy#</span>
+                        <span class="gig_subdate">
+                            <span id="gig_subdate_0" class="gig_month">#mm#</span>
+                            <span id="gig_subdate_0" class="gig_day">#dd#th</span>
+                        </span>
+                    </div>
+                    <div id="gig_city_0" class="gig_city">
+                        <a class="city_map_link" href="">&#x1F588;#city#</a>
+                    </div>
+                    <div id="gig_tickets_0" class="gig_tickets">
+                        <a class="ticket_link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">&#x1F39F;ADV</a>
+                    </div>
+                </div>
             </div>
         </section>
     </body>
+    <script>
+        const gc_template       = document.getElementById("gig_card_0");
+        const gigs_container    = document.getElementById("gigs");
+
+        const gigs = [
+            {
+                dd: 11,
+                mm: "MAY",
+                yy: 25,
+                city: "MANCHESTER",
+                maplink: "https://maps.app.goo.gl/3eV6nZNzozkA9NwRA",
+                ticketlink: ""
+            },
+            {
+                dd: 18,
+                mm: "JULY",
+                yy: 25,
+                city: "LIVERPOOL",
+                maplink: "https://maps.app.goo.gl/BbyJF9wP2zZwakaP7",
+                ticketlink: ""
+            }
+        ]
+
+        for (let gig of gigs) {
+            let gc_clone = gc_template.cloneNode(true);
+            gc_clone.classList.remove("hidden");
+
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#dd#", gig.dd.toString());
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#mm#", gig.mm);
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#yy#", gig.yy.toString());
+            gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", gig.city);
+
+            if (gig.ticketlink.length > 0) {
+                gc_clone.getElementsByClassName("ticket_link")[0].href = gig.ticketlink;
+            }
+            gc_clone.getElementsByClassName("city_map_link")[0].href = gig.maplink;
+
+            gigs_container.appendChild(gc_clone);
+        }
+    </script>
 </html>
