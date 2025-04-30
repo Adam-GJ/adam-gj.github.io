@@ -42,17 +42,22 @@ a, a:hover {
 
 .hb_l {
     justify-content: left;
+    align-items: center;
     font-size: large;
     cursor: pointer;
 }
 
 .hb_c {
     justify-content: center;
+    align-items: center;
+
     font-size: x-large;
 }
 
 .hb_r {
     justify-content: right;
+    align-items: center;
+
     font-size: large;
     gap: 20px;
 }
@@ -139,4 +144,28 @@ a, a:hover {
 
 .hidden {
     display: none;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_tb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.spotify_logo {
+    width: 20px;
+    padding: 10px;
+    filter: invert(1);
+}
+
+.instagram_logo {
+    width: 20px;
+    padding: 10px;
 }
