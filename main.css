@@ -9,7 +9,12 @@ body {
     background-attachment: fixed;
     background-position: center;
 
-    font-family: garamond;
+    /* font-family: garamond; */
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+
     color: #fff;
 
     overflow: hidden;
