@@ -8,12 +8,14 @@
         <link rel="stylesheet" href="/main.css">
         <link rel="icon" href="/VORED_ICON.ico" type="image/x-icon">
         <title>&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</title>
+    
+        <script defer src="gigs.js"></script>
     </head>
     <body>
         <section id="headerbar" class="hb">
             <div class="hb_l">&#x2630;</div>
             <!-- <div class="hb_c">&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</div> -->
-            <div class="hb_c"><a href="/">VORED</a></div>
+            <div class="hb_c"><a href="/index.html">VORED</a></div>
             <div class="hb_r">
                 <span class="hb_r_item"><a href="https://www.instagram.com/vored_hxc/"><img class="instagram_logo" src="/Instagram_Glyph_White.png"></a></span>
                 <span class="hb_r_item"><a href="https://open.spotify.com/artist/0dVLSPMdwVk75hQnZEkhiV"><img class="spotify_logo" src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Black.png"></a></span>
@@ -21,32 +23,15 @@
             </div>
         </section>
         <section id="main" class="main">
-            <!-- <div id="gig_tmp" class="gig_tmp_big">
-                <div class="gt_container">
-                    <a class="gt_location" href="https://maps.app.goo.gl/a9ZiJtiqM1k9t4hG7">
-                        <div id="gt_city"  class="gt_city" >MANCHESTER</div>
-                        <div id="gt_venue" class="gt_venue">Mother Mary's</div>
-                    </a>
-                    <div class="gt_datetime">
-                        <div class="gt_date">11th MAY 2025</div>
-                        <div class="gt_time">Doors: TBA</div>
-                    </div>
+            
+            <div id="giglist_container" class="giglist_container">
+                <div id="giglist_item_temp" class="giglist_item_hidden">
+                    <div class="gitm gigdate">#date#</div>
+                    <div class="gitm gigcity">#city#</div>
+                    <div class="gitm gigicon">#icons#</div>
                 </div>
-                <div class="gt_container2">
-                    <a class="gt_info" href="https://www.instagram.com/vored_hxc/">
-                        <img class="gt_info_img" src="/info.png">
-                        <div id="gt_inf" class="gt_inf">INFO</div>
-                    </a>
-                    <a class="gt_info" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                        <img class="gt_info_img" src="/ticket.png">
-                        <div id="gt_tix" class="gt_tix">ADVANCED TICKETS</div>
-                    </a>
-                    <a class="gt_info" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                        <img class="gt_info_img" src="/door.png">
-                        <div id="gt_otd" class="gt_otd">OTD AVAILABLE</div>
-                    </a>
-                </div>
-            </div> -->
+            </div>
+
             <div id="gig_tmp" class="gig_tmp_big_hidden">
                 <div class="gt_container">
                     <a class="gt_location" href="https://maps.app.goo.gl/a9ZiJtiqM1k9t4hG7">
@@ -76,37 +61,9 @@
         </section>
     </body>
     <script>
-        const gc_template       = document.getElementById("gig_tmp");
-        const gigs_container    = document.getElementById("main");
+        
 
-        const gigs = {
-            "MANCHESTER110525": {
-                dd: 11,
-                mm: 5,
-                mmm: "MAY",
-                yy: 25,
-                yyyy: 2025,
-                time: "",
-                city: "MANCHESTER",
-                venue: "Mother Mary's Bar",
-                maplink: "https://maps.app.goo.gl/3eV6nZNzozkA9NwRA",
-                ticketlink: "",
-                otd: true
-            },
-            "LIVERPOOL180725": {
-                dd: 18,
-                mm: 7,
-                mmm: "JULY",
-                yy: 25,
-                yyyy: 2025,
-                time: "",
-                city: "LIVERPOOL",
-                venue: "Outpost",
-                maplink: "https://maps.app.goo.gl/BbyJF9wP2zZwakaP7",
-                ticketlink: "",
-                otd: true
-            }
-        }
+        
 
         // for (let gig of gigs) {
         //     let gc_clone = gc_template.cloneNode(true);
@@ -125,34 +82,34 @@
         //     gigs_container.appendChild(gc_clone);
         // }
 
-        const params = new URLSearchParams(window.location.search);
-        const code = params.get('code');
+        // const params = new URLSearchParams(window.location.search);
+        // const code = params.get('code');
 
-        if (code) {
-            let thisgig = gigs[code];
-            let gc_clone = gc_template.cloneNode(true);
+        // if (code) {
+        //     let thisgig = gigs[code];
+        //     let gc_clone = gc_template.cloneNode(true);
 
-            gc_clone.classList.remove("gig_tmp_big_hidden");
-            gc_clone.classList.add("gig_tmp_big");
+        //     gc_clone.classList.remove("gig_tmp_big_hidden");
+        //     gc_clone.classList.add("gig_tmp_big");
 
-            gc_clone.getElementsByClassName("gt_location")[0].href = thisgig.maplink;
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", `${thisgig.city}`);
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#venue#", `${thisgig.venue}`);
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#date#", `${thisgig.dd}th ${thisgig.mmm} ${thisgig.yyyy}`);
+        //     gc_clone.getElementsByClassName("gt_location")[0].href = thisgig.maplink;
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", `${thisgig.city}`);
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#venue#", `${thisgig.venue}`);
+        //     gc_clone.innerHTML = gc_clone.innerHTML.replace("#date#", `${thisgig.dd}th ${thisgig.mmm} ${thisgig.yyyy}`);
         
-            if (thisgig.time === "") {
-                gc_clone.innerHTML = gc_clone.innerHTML.replace("#time#", "TBA");
-            } else {
-                gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", `${thisgig.time}`);
-            }
+        //     if (thisgig.time === "") {
+        //         gc_clone.innerHTML = gc_clone.innerHTML.replace("#time#", "TBA");
+        //     } else {
+        //         gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", `${thisgig.time}`);
+        //     }
 
-            if (thisgig.otd) {
-                gc_clone.innerHTML = gc_clone.innerHTML.replace("#AVAILABLE#", "AVAILABLE");
-            } else {
-                gc_clone.innerHTML = gc_clone.innerHTML.replace("#AVAILABLE#", "UNAVAILABLE");
-            }
+        //     if (thisgig.otd) {
+        //         gc_clone.innerHTML = gc_clone.innerHTML.replace("#AVAILABLE#", "AVAILABLE");
+        //     } else {
+        //         gc_clone.innerHTML = gc_clone.innerHTML.replace("#AVAILABLE#", "UNAVAILABLE");
+        //     }
 
-            gigs_container.appendChild(gc_clone);
-        }
+        //     gigs_container.appendChild(gc_clone);
+        // }
     </script>
 </html>
