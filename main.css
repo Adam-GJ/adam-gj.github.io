@@ -17,7 +17,7 @@ body {
 
     color: #fff;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 a, a:hover {
@@ -197,6 +197,21 @@ h1 {
     cursor: pointer;
 }
 
+.upcg_hidden {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 150%;
+    padding: 2px;
+    margin: 3px;
+    transition-duration: 250ms;
+    outline: 1px solid #e0e0e000;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
 .upcg:hover {
     outline: 1px solid #e0e0e0ff;
     background-color: #00000060;
@@ -299,4 +314,76 @@ h1 {
     font-size: medium;
     width: 100px;
     /* height: 50px; */
+}
+
+.seperator {
+    width: 90%;
+    height: 2px;
+    background: #000;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+.giglist_container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.giglist_item_hidden {
+    display: none;
+    justify-content: space-between;
+
+    width: 60%;
+    font-size: x-large;
+
+    padding: 8px;
+    border: 2px solid #00000000;
+    border-radius: 15px;
+    transition-duration: 150ms;
+}
+
+.giglist_item {
+    display: flex;
+    justify-content: space-between;
+
+    width: 60%;
+    font-size: x-large;
+
+    padding: 8px;
+    border: 2px solid #00000000;
+    border-radius: 15px;
+    transition-duration: 150ms;
+}
+
+.giglist_item:hover {
+    /* background-color: #ffffff20; */
+    border: 2px solid #fff;
+}
+
+.gitm {
+    width: 28%;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    /* background-color: #ffffff20; */
+    background-color: #00000080;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    height: 50px;
+    line-height: 50px;
+    /* outline: 1px solid lime; */
+}
+
+.gigdate {
+    justify-content: left;
+}
+
+.gigcity {
+    justify-content: center;
+}
+
+.gigicon {
+    justify-content: right;
 }
