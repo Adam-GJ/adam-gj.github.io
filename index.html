@@ -7,13 +7,16 @@
 
         <link rel="stylesheet" href="main.css">
         <link rel="icon" href="VORED_ICON.ico" type="image/x-icon">
+        
+        <!-- <script src="https://github.com/Adam-GJ/adam-gj.github.io/blob/main/gigs.csv"></script> -->
+        <script defer src="main.js"></script>
         <title>&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</title>
     </head>
     <body>
         <section id="headerbar" class="hb">
             <div class="hb_l">&#x2630;</div>
             <!-- <div class="hb_c">&#x1D4E5;&#x1D4DE;&#x1D4E1;&#x1D4D4;&#x1D4D3;</div> -->
-            <div class="hb_c"><a href="/">VORED</a></div>
+            <div class="hb_c"><a href="/vored.html">VORED</a></div>
             <div class="hb_r">
                 <span class="hb_r_item"><a href="https://www.instagram.com/vored_hxc/"><img class="instagram_logo" src="Instagram_Glyph_White.png"></a></span>
                 <span class="hb_r_item"><a href="https://open.spotify.com/artist/0dVLSPMdwVk75hQnZEkhiV"><img class="spotify_logo" src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Black.png"></a></span>
@@ -24,16 +27,21 @@
             <div id="home" class="home">
                 <h1>WHAT MAKES US</h1>
 
-                <div class="home_tb">
-                    Liverpool Heavy Hardcore. Founded under the name Eyeball Eeter in 2023. We make music that will hopefully
+                <div class="home_tb" style="flex-direction: column;">
+                    <!-- Liverpool Heavy Hardcore. Founded under the name Eyeball Eeter in 2023. We make music that will hopefully
                     make you want to kick the shit out of yourself and anyone standing dangerously close to you. We are the new wave
-                    of post-vegan heavy hitters, so stuff something in ur ear tubes and get fucked.
+                    of post-vegan heavy hitters, so stuff something in ur ear tubes and get fucked. -->
+                    <img width="128px" src="susan.png">
+                    A description is coming soon. For now, Susan is protecting the website.
                 </div>
-                <br><br>
+                <br>
+                <div class="seperator"></div>
+                <br>
                 <h1>UPCOMING GIGS</h1>
                 <div id="upcoming_gigs" class="upcoming_gigs">
-                    <a class="upcg" href="/gigs/?code=MANCHESTER110525"><span>MANCHESTER</span><span>11<sup>th</sup> MAY</span></a>
-                    <a class="upcg" href="/gigs/?code=LIVERPOOL180725"><span>LIVERPOOL</span><span>18<sup>th</sup> JULY</span></a>
+                    <a id="upcg_template" class="upcg_hidden" href="/gigs/?code="><span>#city#</span><span>#date#</span></a>
+                    <!-- <a class="upcg" href="/gigs/?code=MANCHESTER110525"><span>MANCHESTER</span><span>11<sup>th</sup> MAY</span></a> -->
+                    <!-- <a class="upcg" href="/gigs/?code=LIVERPOOL180725"><span>LIVERPOOL</span><span>18<sup>th</sup> JULY</span></a> -->
                 </div>
             </div>
             <div id="gigs" class="gigs hidden">
@@ -55,44 +63,4 @@
             </div>
         </section>
     </body>
-    <script>
-        const gc_template       = document.getElementById("gig_card_0");
-        const gigs_container    = document.getElementById("gigs");
-
-        const gigs = [
-            {
-                dd: 11,
-                mm: "MAY",
-                yy: 25,
-                city: "MANCHESTER",
-                maplink: "https://maps.app.goo.gl/3eV6nZNzozkA9NwRA",
-                ticketlink: ""
-            },
-            {
-                dd: 18,
-                mm: "JULY",
-                yy: 25,
-                city: "LIVERPOOL",
-                maplink: "https://maps.app.goo.gl/BbyJF9wP2zZwakaP7",
-                ticketlink: ""
-            }
-        ]
-
-        for (let gig of gigs) {
-            let gc_clone = gc_template.cloneNode(true);
-            gc_clone.classList.remove("hidden");
-
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#dd#", gig.dd.toString());
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#mm#", gig.mm);
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#yy#", gig.yy.toString());
-            gc_clone.innerHTML = gc_clone.innerHTML.replace("#city#", gig.city);
-
-            if (gig.ticketlink.length > 0) {
-                gc_clone.getElementsByClassName("ticket_link")[0].href = gig.ticketlink;
-            }
-            gc_clone.getElementsByClassName("city_map_link")[0].href = gig.maplink;
-
-            gigs_container.appendChild(gc_clone);
-        }
-    </script>
 </html>
